@@ -64,8 +64,14 @@ def updateRoi(roi):
     im3.setImage(arr1)
     updateRoiPlot(roi, a, b)
   
-rois = []
-rois.append(pg.TestROI([0,  0], [20, 20], maxBounds=QtCore.QRectF(-10, -10, 230, 140), pen=(0,9)))
+rois = [
+    pg.TestROI(
+        [0, 0],
+        [20, 20],
+        maxBounds=QtCore.QRectF(-10, -10, 230, 140),
+        pen=(0, 9),
+    )
+]
 
 # Add each ROI to the scene and link its data to a plot curve with the same color
 for r in rois:
