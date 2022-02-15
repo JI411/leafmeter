@@ -102,9 +102,15 @@ class ExampleApp(QtWidgets.QMainWindow, Design):
 
         # Create ROIs
         #lastRoi = None
-        
-        rois = []
-        rois.append(TestROI([0,  0], [20, 20], maxBounds=QtCore.QRectF(-100, -100, 230, 230), pen=(0,9)))
+
+        rois = [
+            TestROI(
+                [0, 0],
+                [20, 20],
+                maxBounds=QtCore.QRectF(-100, -100, 230, 230),
+                pen=(0, 9),
+            )
+        ]
 
         # Add each ROI to the scene and link its data to a plot curve with the same color
         for r in rois:
